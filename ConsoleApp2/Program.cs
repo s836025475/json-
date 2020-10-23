@@ -14,7 +14,7 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            var fileName = @"D:\zjc\json.txt";
+            var fileName = @"D:\zjc\new 25.txt";
             string data = JsonStr(fileName);
             JObject Json = JObject.Parse(data);
             //获取主要字段
@@ -102,8 +102,8 @@ namespace ConsoleApp2
                 totalFee += decimal.Parse(w.Mo_0);
 
             });
-            string totalCouuntTitle = Json["data"]["formInfo"]["detailMap"]["Dd_0"]["widgetVos"]["Mo_0"]["detailCountName"].ToString();
-            string totalFeeTitle = Json["data"]["formInfo"]["detailMap"]["Dd_0"]["widgetVos"]["Nu_1"]["detailCountName"].ToString();
+            string totalFeeTitle = Json["data"]["formInfo"]["detailMap"]["Dd_0"]["widgetVos"]["Mo_0"]["detailCountName"].ToString();
+            string totalCouuntTitle = Json["data"]["formInfo"]["detailMap"]["Dd_0"]["widgetVos"]["Nu_1"]["detailCountName"].ToString();
 
             consoleString += totalFeeTitle + ": " + totalFee +"\t" + totalCouuntTitle + ": " + totalCount;
             return consoleString;
